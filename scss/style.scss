@@ -1,6 +1,16 @@
 body{
   background: #043873;
-
+  .img-1{
+    align-items: center;
+   display: flex;
+   justify-content: space-between;
+  margin-left: 3em;
+     img{
+height: 50px;
+ 
+    
+    }
+  }
 nav {
   display: flex;
   justify-content: end;
@@ -13,7 +23,9 @@ nav {
 }
 .class1 {
   background: #043873;
+  
 }
+
 .button {
   margin-left: 2em;
   display: flex;
