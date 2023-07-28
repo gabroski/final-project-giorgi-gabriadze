@@ -1,0 +1,63 @@
+body {
+  background: #043873;
+}
+body nav {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+body nav a {
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 2em;
+}
+body .class1 {
+  background: #043873;
+}
+body .button {
+  margin-left: 2em;
+  display: flex;
+}
+body .button .login {
+  display: flex;
+  height: 60px;
+  padding: 16px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #ffe492;
+}
+body .button .login:hover {
+  color: #000;
+}
+body .button .try {
+  display: flex;
+  height: 60px;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #4f9cf9;
+  margin-left: 2em;
+}
+body header {
+  width: 100%;
+}
+body header .Winehouse {
+  color: #fff;
+  align-self: stretch;
+  font-family: Inter;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.28px;
+}
+body header .lines {
+  width: 100%;
+  height: 547px;
+  position: absolute;
+  color: #FFE492;
+}/*# sourceMappingURL=style.css.map */
