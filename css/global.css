@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: myfont;
+  src: url(../fonts/bpg-mikheil-stefane-webfont.ttf);
+  @font-face {
+    font-family: myFontEn;
+    src: url(/fonts/Barlow-Bold.ttf);
+  }
+}
 body {
   background: #043873;
 }
@@ -27,6 +35,12 @@ body nav a {
   color: #ffffff;
   margin-left: 2em;
 }
+body nav .a1 {
+  transition: transform 0.2 ease;
+}
+body nav .a1:active {
+  transform: scale(0.96);
+}
 body .class1 {
   background: #043873;
 }
@@ -35,45 +49,100 @@ body .button {
   display: flex;
 }
 body .button .login {
+  color: #043873;
   display: flex;
   height: 60px;
   padding: 16px 40px;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 8px;
+  border-radius: 6px;
   background: #ffe492;
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: transform 0.2 ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-body .button .login:hover {
-  color: #000;
+body .button .login:active {
+  transform: scale(0.96);
 }
 body .button .try {
+  color: #043873;
   display: flex;
   height: 60px;
   padding: 16px 24px;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 8px;
+  border-radius: 6px;
   background: #4f9cf9;
   margin-left: 2em;
+  border: none;
+  font-size: 18px;
+  font-family: myFontEn;
+  font-weight: 400;
+  cursor: pointer;
+  transition: transform 0.2 ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+body .button .try:active {
+  transform: scale(0.96);
 }
 body header {
   width: 100%;
 }
 body header .Winehouse {
+  display: flex;
   color: #fff;
   align-self: stretch;
-  font-family: Inter;
+  font-family: myfont;
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -1.28px;
+  position: absolute;
+  margin-top: 3em;
+  margin-left: 0.5em;
+}
+body header .Winehouse-2 {
+  width: 656px;
+  height: 60px;
+  margin-left: 2em;
+  margin-top: 17em;
+  position: absolute;
+  color: #FFF;
+  font-family: myfont;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 166.667% */
+  letter-spacing: -0.36px;
+}
+body header .lines-div {
+  position: relative;
 }
 body header .lines {
+  color: #ffe492;
   width: 100%;
   height: 547px;
+}
+
+.main {
+  display: flex;
+}
+
+.main-img0 {
   position: absolute;
-  color: #ffe492;
+  display: flex;
+}
+
+.main-img {
+  width: 554px;
+  height: 449px;
+  margin-left: 48em;
+  align-items: end;
+  margin-top: 10em;
 }/*# sourceMappingURL=global.css.map */
