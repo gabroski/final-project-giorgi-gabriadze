@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: myfont;
 }
 
 @font-face {
@@ -11,6 +12,9 @@
     font-family: myFontEn;
     src: url(/fonts/Barlow-Bold.ttf);
   }
+}
+body {
+  background: #043873;
 }
 body .img-1 {
   align-items: center;
@@ -30,7 +34,7 @@ body nav {
 body nav a {
   font-family: myfont;
   text-decoration: none;
-  color: black;
+  color: #ffffff;
   margin-left: 2em;
 }
 body nav .a1 {
@@ -39,31 +43,10 @@ body nav .a1 {
 body nav .a1:active {
   transform: scale(0.96);
 }
-
-.sec-1 {
-  margin-top: 4em;
-  margin-left: 2em;
+body .class1 {
+  background: #043873;
+}
+body .section0 {
   display: flex;
-}
-.sec-1 .h1 {
-  position: absolute;
-}
-.sec-1 h1 {
-  font-family: myfont;
-  margin-top: 3em;
-  width: 700px;
-}
-.sec-1 .img1 {
-  position: relative;
-  width: 602.836px;
-  height: 448.518px;
-}
-.sec-1 .img2 img {
-  display: flex;
-  margin-left: 15em;
-  margin-top: 4em;
-}
-
-.main {
-  display: flex;
-}/*# sourceMappingURL=about.css.map */
+  justify-content: space-around;
+}/*# sourceMappingURL=service.css.map */

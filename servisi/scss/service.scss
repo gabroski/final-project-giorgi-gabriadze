@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myfont;
+  }
+  @font-face {
+    font-family: myfont;
+    src: url(/fonts/bpg-mikheil-stefane-webfont.ttf);
+    @font-face {
+      font-family: myFontEn;
+      src: url(/fonts/Barlow-Bold.ttf);
+    }
+  }
+  body {
+    background: #043873;
+  
+    .img-1 {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-left: 3em;
+      img {
+        height: 50px;
+      }
+    }
+    nav {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      margin-right: 3em;
+      a {
+        font-family: myfont;
+        text-decoration: none;
+        color: #ffffff;
+        margin-left: 2em;
+      }
+      .a1{
+        transition: transform 0.2 ease;
+      }
+      .a1:active{
+        transform: scale(0.96);
+      }
+      
+    }
+    .class1 {
+      background: #043873;
+    }
+  .section0{
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+  

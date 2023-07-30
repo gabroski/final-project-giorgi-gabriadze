@@ -5,12 +5,13 @@
 }
 @font-face {
   font-family: myfont;
-  src: url(../fonts/bpg-mikheil-stefane-webfont.ttf);
+  src: url(/fonts/bpg-mikheil-stefane-webfont.ttf);
   @font-face {
     font-family: myFontEn;
-    src: url(../fonts/Barlow-Bold.ttf);
+    src: url(/fonts/Barlow-Bold.ttf);
   }
 }
+body {
   .img-1 {
     align-items: center;
     display: flex;
@@ -26,23 +27,51 @@
     align-items: center;
     margin-right: 3em;
     a {
+      font-family: myfont;
       text-decoration: none;
-      color: #ffffff;
+      color: black;
       margin-left: 2em;
     }
-    .a1{
+    .a1 {
       transition: transform 0.2 ease;
     }
-    .a1:active{
+    .a1:active {
       transform: scale(0.96);
     }
-    
-  }
-  .class1 {
-    background: #043873;
-  }
-.sec-1{
-  p{
-    font-family: myfont;
   }
 }
+.sec-1 {
+    margin-top: 4em;
+    margin-left: 2em;
+    display: flex;
+  .h1 {
+    position: absolute;
+  }
+  h1 {
+    font-family: myfont;
+    margin-top: 3em;
+    width: 700px;
+
+  }
+
+.img1 {
+  position: relative;
+  width: 602.836px;
+  height: 448.518px;
+
+}
+.img2{img{
+
+
+    display: flex;
+    margin-left: 15em;
+    margin-top: 4em;
+    
+    
+}
+}
+}
+.main{
+    display: flex;
+}
+
