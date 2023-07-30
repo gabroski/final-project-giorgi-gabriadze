@@ -6,7 +6,7 @@
   }
   @font-face {
     font-family: myfont;
-    src: url(/fonts/bpg-mikheil-stefane-webfont.ttf);
+    src: url(../../fonts/bpg-mikheil-stefane-webfont.ttf);
     @font-face {
       font-family: myFontEn;
       src: url(/fonts/Barlow-Bold.ttf);
@@ -41,24 +41,10 @@
       .a1:active{
         transform: scale(0.96);
       }
-      
-    }
-    .class1 {
-      background: #043873;
-    }
-    .sec-1{display: flex;
-        margin-top: 5em;
-        h1{
-
-     color: #ffffff;
-        font-weight: 400;
-        width: 700px;
-        margin-top:4em ;
-        margin-left: 3em;
-    }
-    img{
-        width: 400px;
-        height: 400px;
     }
 }
+.contact{
+    color: #ffffff;
+    margin-top: 5em;
+    margin-left: 3em;
 }

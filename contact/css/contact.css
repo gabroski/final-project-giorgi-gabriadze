@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: myfont;
-  src: url(/fonts/bpg-mikheil-stefane-webfont.ttf);
+  src: url(../../fonts/bpg-mikheil-stefane-webfont.ttf);
   @font-face {
     font-family: myFontEn;
     src: url(/fonts/Barlow-Bold.ttf);
@@ -43,21 +43,9 @@ body nav .a1 {
 body nav .a1:active {
   transform: scale(0.96);
 }
-body .class1 {
-  background: #043873;
-}
-body .sec-1 {
-  display: flex;
-  margin-top: 5em;
-}
-body .sec-1 h1 {
+
+.contact {
   color: #ffffff;
-  font-weight: 400;
-  width: 700px;
-  margin-top: 4em;
+  margin-top: 5em;
   margin-left: 3em;
-}
-body .sec-1 img {
-  width: 400px;
-  height: 400px;
-}/*# sourceMappingURL=news.css.map */
+}/*# sourceMappingURL=contact.css.map */
