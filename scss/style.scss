@@ -29,6 +29,7 @@ body {
     align-items: center;
     margin-right: 3em;
     a {
+      font-family: myfont;
       text-decoration: none;
       color: #ffffff;
       margin-left: 2em;
@@ -60,6 +61,7 @@ body {
       border-radius: 6px;
       background: #ffe492;
       border: none;
+      font-family: myFontEn;
       font-size: 18px;
       font-weight: 400;
       cursor: pointer;
