@@ -49,6 +49,10 @@
   .section0{
     display: flex;
     justify-content: space-around;
+
+    .card_container {
+      width: 250px;
+    }
   }
 }
 
