@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger - Math Study with Luka Mshvildadze</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💬</text></svg>">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/messenger.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>Messenger</h1>
+                <a href="../index.html" class="back-button">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Home</span>
+                </a>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="page-header">
+                <div class="math-logo-large">📐</div>
+                <h2>Mathematics Learning Community</h2>
+                <p>Connect with fellow students and your instructor</p>
+            </div>
+            
+            <div class="messenger-container">
+                <!-- Sidebar -->
+                <div class="messenger-sidebar">
+                    <div class="sidebar-header">
+                        <div class="user-profile">
+                            <div class="user-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="user-info">
+                                <h3 id="currentUserName">Guest User</h3>
+                                <span class="status online">Online</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-actions">
+                            <button class="sidebar-btn" title="New Message">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="sidebar-btn" title="More Options">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-tabs">
+                        <button class="tab-btn active" data-tab="chats">
+                            <i class="fas fa-comments"></i>
+                            <span>Chats</span>
+                        </button>
+                        <button class="tab-btn" data-tab="groups">
+                            <i class="fas fa-users"></i>
+                            <span>Groups</span>
+                        </button>
+                        <button class="tab-btn" data-tab="friends">
+                            <i class="fas fa-user-friends"></i>
+                            <span>Friends</span>
+                        </button>
+                        <button class="tab-btn" data-tab="requests">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Requests</span>
+                            <span class="badge" id="requestBadge">2</span>
+                        </button>
+                    </div>
+
+                    <div class="sidebar-content">
+                        <!-- Chats Tab -->
+                        <div class="tab-content active" id="chatsTab">
+                            <div class="search-box">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search chats..." id="chatSearch">
+                            </div>
+                            <div class="chat-list" id="chatList">
+                                <div class="chat-item active" data-chat="luka">
+                                    <div class="chat-avatar">
+                                        <i class="fas fa-user-graduate"></i>
+                                    </div>
+                                    <div class="chat-info">
+                                        <h4>Luka Mshvildadze</h4>
+                                        <p class="last-message">Hello! Welcome to our mathematics study program...</p>
+                                        <span class="message-time">10:30 AM</span>
+                                    </div>
+                                    <div class="chat-status">
+                                        <span class="unread-count">2</span>
+                                    </div>
+                                </div>
+                                <div class="chat-item" data-chat="study-group">
+                                    <div class="chat-avatar group">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="chat-info">
+                                        <h4>Calculus Study Group</h4>
+                                        <p class="last-message">Maria: Can someone help with derivatives?</p>
+                                        <span class="message-time">9:45 AM</span>
+                                    </div>
+                                    <div class="chat-status">
+                                        <span class="unread-count">5</span>
+                                    </div>
+                                </div>
+                                <div class="chat-item" data-chat="alex">
+                                    <div class="chat-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="chat-info">
+                                        <h4>Alex Johnson</h4>
+                                        <p class="last-message">Thanks for the help with linear algebra!</p>
+                                        <span class="message-time">Yesterday</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Groups Tab -->
+                        <div class="tab-content" id="groupsTab">
+                            <div class="search-box">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search groups..." id="groupSearch">
+                            </div>
+                            <div class="group-list" id="groupList">
+                                <div class="group-item" data-group="calculus">
+                                    <div class="group-avatar">
+                                        <i class="fas fa-calculator"></i>
+                                    </div>
+                                    <div class="group-info">
+                                        <h4>Calculus Study Group</h4>
+                                        <p>24 members • Active now</p>
+                                    </div>
+                                </div>
+                                <div class="group-item" data-group="algebra">
+                                    <div class="group-avatar">
+                                        <i class="fas fa-vector-square"></i>
+                                    </div>
+                                    <div class="group-info">
+                                        <h4>Linear Algebra Club</h4>
+                                        <p>18 members • 2 online</p>
+                                    </div>
+                                </div>
+                                <div class="group-item" data-group="analysis">
+                                    <div class="group-avatar">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="group-info">
+                                        <h4>Mathematical Analysis</h4>
+                                        <p>12 members • 1 online</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Friends Tab -->
+                        <div class="tab-content" id="friendsTab">
+                            <div class="search-box">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search friends..." id="friendSearch">
+                            </div>
+                            <div class="user-search-box">
+                                <input type="text" placeholder="Search users by username or name..." id="userSearchInput">
+                            </div>
+                            <div class="user-search-results" id="userSearchResults"></div>
+                            <div class="friend-list" id="friendList">
+                                <div class="friend-item">
+                                    <div class="friend-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="friend-info">
+                                        <h4>Maria Garcia</h4>
+                                        <p>Online</p>
+                                    </div>
+                                    <div class="friend-actions">
+                                        <button class="friend-btn" title="Message">
+                                            <i class="fas fa-comment"></i>
+                                        </button>
+                                        <button class="friend-btn" title="Call">
+                                            <i class="fas fa-phone"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="friend-item">
+                                    <div class="friend-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="friend-info">
+                                        <h4>Alex Johnson</h4>
+                                        <p>Last seen 2 hours ago</p>
+                                    </div>
+                                    <div class="friend-actions">
+                                        <button class="friend-btn" title="Message">
+                                            <i class="fas fa-comment"></i>
+                                        </button>
+                                        <button class="friend-btn" title="Call">
+                                            <i class="fas fa-phone"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Requests Tab -->
+                        <div class="tab-content" id="requestsTab">
+                            <div class="request-list" id="requestList">
+                                <div class="request-item">
+                                    <div class="request-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="request-info">
+                                        <h4>Sarah Wilson</h4>
+                                        <p>Wants to join Calculus Study Group</p>
+                                    </div>
+                                    <div class="request-actions">
+                                        <button class="request-btn accept" title="Accept">
+                                            <i class="fas fa-check"></i>
+                                        </button>
+                                        <button class="request-btn decline" title="Decline">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="request-item">
+                                    <div class="request-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="request-info">
+                                        <h4>David Chen</h4>
+                                        <p>Sent you a friend request</p>
+                                    </div>
+                                    <div class="request-actions">
+                                        <button class="request-btn accept" title="Accept">
+                                            <i class="fas fa-check"></i>
+                                        </button>
+                                        <button class="request-btn decline" title="Decline">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Area -->
+                <div class="chat-area">
+                    <div class="chat-header">
+                        <div class="chat-user-info">
+                            <div class="chat-user-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="chat-user-details">
+                                <h3 id="chatUserName">Luka Mshvildadze</h3>
+                                <span class="chat-status">Online</span>
+                            </div>
+                        </div>
+                        <div class="chat-actions">
+                            <button class="chat-action-btn" title="Voice Call">
+                                <i class="fas fa-phone"></i>
+                            </button>
+                            <button class="chat-action-btn" title="Video Call">
+                                <i class="fas fa-video"></i>
+                            </button>
+                            <button class="chat-action-btn" title="More Options">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message-date">Today</div>
+                        
+                        <div class="message received">
+                            <div class="message-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-text">
+                                    Hello! Welcome to our mathematics study program. I'm Luka Mshvildadze, your mathematics instructor.
+                                </div>
+                                <div class="message-time">10:30 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="message sent">
+                            <div class="message-content">
+                                <div class="message-text">
+                                    Thank you! I'm excited to learn mathematics with you.
+                                </div>
+                                <div class="message-time">10:32 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="message received">
+                            <div class="message-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-text">
+                                    Great! We'll be covering calculus, linear algebra, and mathematical analysis. Do you have any specific topics you'd like to focus on?
+                                </div>
+                                <div class="message-time">10:33 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="message sent">
+                            <div class="message-content">
+                                <div class="message-text">
+                                    I'm particularly interested in calculus and its applications.
+                                </div>
+                                <div class="message-time">10:35 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="message received">
+                            <div class="message-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-text">
+                                    Excellent choice! Calculus is fundamental to many fields. We'll start with limits and derivatives, then move to integrals and applications.
+                                </div>
+                                <div class="message-time">10:36 AM</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-area">
+                        <div class="chat-input-container">
+                            <button class="input-action-btn" title="Attach File">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <div class="chat-input-wrapper">
+                                <input type="text" id="messageInput" placeholder="Type a message..." maxlength="500">
+                                <div class="input-actions">
+                                    <button class="input-action-btn" title="Emoji">
+                                        <i class="fas fa-smile"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="send-btn" id="sendBtn" title="Send Message">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Math Study Program. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="../js/messenger.js"></script>
+</body>
+</html> 

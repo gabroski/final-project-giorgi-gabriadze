@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Lessons - Math Study with Luka Mshvildadze</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/videos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>Video Lessons</h1>
+                <a href="../index.html" class="back-button">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Home</span>
+                </a>
+                <p class="subtitle">Learn mathematics through comprehensive video tutorials</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <button id="addVideoBtn" class="add-video-btn" style="display:none;"><i class="fas fa-plus"></i> Add Video</button>
+            <div id="uploadedVideos"></div>
+            <div id="videoUploadModal" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <span class="close" id="closeModalBtn">&times;</span>
+                    <h3>Add a YouTube Video</h3>
+                    <form id="videoUploadForm">
+                        <input type="text" id="videoTitle" placeholder="Video Title" required style="margin-bottom:12px; width:100%; padding:10px; border-radius:8px; border:1.5px solid #e2e8f0;">
+                        <input type="text" id="youtubeLink" placeholder="YouTube Link (https://...)" required style="margin-bottom:12px; width:100%; padding:10px; border-radius:8px; border:1.5px solid #e2e8f0;">
+                        <button type="submit" class="category-btn" style="width:100%;">Upload Video</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="page-header">
+                <div class="math-logo-large">📐</div>
+                <h2>Video Mathematics Lessons</h2>
+                <p>Comprehensive video tutorials covering all mathematics topics</p>
+            </div>
+            
+            <section class="video-section">
+                <h3 class="section-title">Featured Lessons</h3>
+                <div class="video-grid">
+                    <div class="video-card featured">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="video-duration">45:30</div>
+                            <div class="video-overlay">
+                                <span class="featured-badge">Featured</span>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h4>Introduction to Calculus: Limits and Continuity</h4>
+                            <p class="video-description">A comprehensive introduction to the fundamental concepts of calculus, focusing on limits and continuity.</p>
+                            <div class="video-meta">
+                                <span class="video-topic">Calculus</span>
+                                <span class="video-level">Beginner</span>
+                                <span class="video-views">1.2K views</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="video-duration">32:15</div>
+                        </div>
+                        <div class="video-info">
+                            <h4>Derivatives: Power Rule and Chain Rule</h4>
+                            <p class="video-description">Learn the essential rules for finding derivatives, including the power rule and chain rule.</p>
+                            <div class="video-meta">
+                                <span class="video-topic">Calculus</span>
+                                <span class="video-level">Intermediate</span>
+                                <span class="video-views">856 views</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="video-duration">28:45</div>
+                        </div>
+                        <div class="video-info">
+                            <h4>Linear Algebra: Vectors and Matrices</h4>
+                            <p class="video-description">Understanding the basics of vectors and matrices in linear algebra.</p>
+                            <div class="video-meta">
+                                <span class="video-topic">Linear Algebra</span>
+                                <span class="video-level">Beginner</span>
+                                <span class="video-views">743 views</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="video-duration">38:20</div>
+                        </div>
+                        <div class="video-info">
+                            <h4>Integration Techniques: Substitution and Parts</h4>
+                            <p class="video-description">Master the techniques of integration using substitution and integration by parts.</p>
+                            <div class="video-meta">
+                                <span class="video-topic">Calculus</span>
+                                <span class="video-level">Intermediate</span>
+                                <span class="video-views">612 views</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="video-section">
+                <h3 class="section-title">Course Categories</h3>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h4>Calculus</h4>
+                        <p>Complete course on differential and integral calculus</p>
+                        <div class="category-stats">
+                            <span>24 videos</span>
+                            <span>•</span>
+                            <span>12 hours</span>
+                        </div>
+                        <button class="category-btn">View Course</button>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-vector-square"></i>
+                        </div>
+                        <h4>Linear Algebra</h4>
+                        <p>Comprehensive study of vectors, matrices, and transformations</p>
+                        <div class="category-stats">
+                            <span>18 videos</span>
+                            <span>•</span>
+                            <span>9 hours</span>
+                        </div>
+                        <button class="category-btn">View Course</button>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Mathematical Analysis</h4>
+                        <p>Advanced topics in real analysis and mathematical theory</p>
+                        <div class="category-stats">
+                            <span>15 videos</span>
+                            <span>•</span>
+                            <span>8 hours</span>
+                        </div>
+                        <button class="category-btn">View Course</button>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h4>Problem Solving</h4>
+                        <p>Strategies and techniques for mathematical problem solving</p>
+                        <div class="category-stats">
+                            <span>12 videos</span>
+                            <span>•</span>
+                            <span>6 hours</span>
+                        </div>
+                        <button class="category-btn">View Course</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="video-section">
+                <h3 class="section-title">Recent Uploads</h3>
+                <div class="recent-videos">
+                    <div class="recent-video-item">
+                        <div class="video-thumbnail small">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="video-duration">15:30</div>
+                        </div>
+                        <div class="video-details">
+                            <h5>Quick Tips: Solving Quadratic Equations</h5>
+                            <p>Quick tutorial on solving quadratic equations using different methods.</p>
+                            <div class="video-meta">
+                                <span class="video-topic">Algebra</span>
+                                <span class="video-date">2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recent-video-item">
+                        <div class="video-thumbnail small">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="video-duration">22:15</div>
+                        </div>
+                        <div class="video-details">
+                            <h5>Understanding Limits: A Visual Approach</h5>
+                            <p>Visual explanation of limits using graphs and interactive examples.</p>
+                            <div class="video-meta">
+                                <span class="video-topic">Calculus</span>
+                                <span class="video-date">1 week ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recent-video-item">
+                        <div class="video-thumbnail small">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="video-duration">18:45</div>
+                        </div>
+                        <div class="video-details">
+                            <h5>Matrix Operations: Addition and Multiplication</h5>
+                            <p>Step-by-step guide to matrix operations with practical examples.</p>
+                            <div class="video-meta">
+                                <span class="video-topic">Linear Algebra</span>
+                                <span class="video-date">1 week ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Math Study Program. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="../js/videos.js"></script>
+</body>
+</html> 
